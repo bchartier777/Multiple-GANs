@@ -4,7 +4,7 @@ from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 
-from utils import to_device, to_var, gen_rand_norm, generate_images
+from utils import to_device, to_device_grad, gen_rand_norm, generate_images
 from network import *
 
 
@@ -82,7 +82,7 @@ def disc_train_onestep(model, bat_img, args):
 
     if (args.mod_name == "W_GP_GAN"):
         # Gradient penalty - Sample batch entries with Uniform distribution
-        unif_samp = to_var(torch.rand(bat_img.shape[0], 1).expand(bat_img.size()))
+        unif_samp = to_device_grad(torch.rand(bat_img.shape[0], 1).expand(bat_img.size()))
 
         # Process the noise with the generator - Refer to Algorithm 1 of Original paper - https://arxiv.org/abs/1701.07875
         gen_inter = unif_samp * bat_img + (1-unif_samp)*gen_out
