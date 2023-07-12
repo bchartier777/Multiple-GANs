@@ -1,4 +1,4 @@
-# Multiple-GANs
+# Multiple GANs
 Implementation of three GANs
 
 ## Overview
