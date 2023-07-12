@@ -41,7 +41,7 @@ The following are not implemented:
 The version of MNIST downloaded with the TorchVision Dataset object.
 
 ## Performance
-The loss for each GAN is similar to the original repo, and sample image quality is also similar.
+The generator and discriminator loss for each model is similar to the original repo, and sample image quality is also similar.
 
 ## Python version and Conda environment
 This has been tested with Python 3.7.4 on Win 10.  Use of a virtual environment is recommended.
