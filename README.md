@@ -22,7 +22,7 @@ The primary reference repo was Shayne Obrien, https://github.com/shayneobrien/ge
 
 One common design approach is to implement separate Model and Trainer classes for 
 each GAN.  This however results in significant source duplication.  Therefore one
-objective of this implementation is to implement three GANs with single GAN, Generator 
+objective of this implementation is to implement the GANs with single GAN, Generator 
 and Discriminator classes, minimizing source duplication.
 
 Other purposes of this implementation are:
